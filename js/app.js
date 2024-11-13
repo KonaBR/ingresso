@@ -1,6 +1,10 @@
 function comprar() {
     
 let quantidadeIngressosComprados = parseInt(document.getElementById('qtd').value);
+if (isNaN(quantidadeIngressosComprados) || quantidadeIngressosComprados <= 0) {
+    alert("Por favor, insira uma quantidade válida.");
+    return;
+}
 let quantidadeIngressosPista = parseInt(document.getElementById('qtd-pista').textContent);
 let quantidadeIngressosSup = parseInt(document.getElementById('qtd-superior').textContent);
 let quantidadeIngressosInf = parseInt(document.getElementById('qtd-inferior').textContent);
